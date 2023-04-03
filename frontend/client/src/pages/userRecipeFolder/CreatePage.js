@@ -2,7 +2,7 @@ import React from "react"
 import TripleHeader from "../../components/globalComponents/TripleHeader"
 import Footer from "../../components/globalComponents/Footer"
 import Header from "../../components/globalComponents/Header"
-import "../../styleFolder/globalComponentsStyles/globalComponents.css"
+
 
 
 

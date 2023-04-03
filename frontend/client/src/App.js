@@ -1,13 +1,13 @@
 import React, {useContext} from "react"
 import { Routes, Route, Navigate } from 'react-router-dom'
 import {UserContext} from "./context/UserProvider"
-import Nav from "./components/appFolder/Nav"
-import ProfilePage from "./pages/authFolder/ProfilePage"
-import LandingPage from "./pages/authFolder/LandingPage"
+import Nav from "./components/globalComponents/Nav"
+import ProfilePage from "./pages/authPages/ProfilePage"
+import LandingPage from "./pages/authPages/LandingPage"
 import ProtectedRoute from "./components/protectedRoutes/ProtectedRoute"
-import AllRecipesPage from "./pages/allRecipes/AllRecipesPage"
-import MyRecipesPage from "./pages/myRecipeFolder/MyRecipesPage"
-import CreateRecipePage from "./pages/myRecipeFolder/CreateRecipePage"
+import AllRecipesPage from "./pages/allRecipesFolder/AllRecipesPage"
+import UserRecipePage from "./pages/userRecipeFolder/UserRecipePage"
+import CreateRecipePage from "./pages/userRecipeFolder/CreatePage"
 
 
 export default function App(props){
@@ -50,10 +50,10 @@ export default function App(props){
           }
         />
         <Route 
-          path="/myRecipesPage" 
+          path="/userRecipePage" 
           element={
             <ProtectedRoute token={token} redirectTo="/">
-              <MyRecipesPage 
+              <UserRecipePage 
               recipes={initChefState.myRecipes}
               chef={user}
               deleteFood={deleteRecipe}

@@ -1,10 +1,10 @@
 import React, {useState, useContext} from "react"
-import "../../styleFolder/globalComponentsStyles/globalComponents.css"
+
 import TripleHeader from "../../components/globalComponents/TripleHeader"
 import Header from "../../components/globalComponents/Header"
 import Footer from "../../components/globalComponents/Footer"
-import AuthForm from "../../components/formComponents/AuthForm"
-import {UserContext} from "../../contextFolder/UserProvider"
+import AuthForm from "../../components/authComponents/AuthForm"
+import {UserContext} from "../../context/UserProvider"
 
 const credentials = {
     username: "",

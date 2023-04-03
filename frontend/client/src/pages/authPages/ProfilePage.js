@@ -2,7 +2,7 @@ import React from "react"
 import TripleHeader from "../../components/globalComponents/TripleHeader"
 import Header from "../../components/globalComponents/Header"
 import Footer from "../../components/globalComponents/Footer"
-import "../../styleFolder/globalComponentsStyles/globalComponents.css"
+
 export default function ProfilePage(props){
     const {deleteAccount, username, id, logout} = props
       function deleteProfile(){

@@ -2,7 +2,7 @@ import React from "react"
 import TripleHeader from "../../components/globalComponents/TripleHeader"
 import Header from "../../components/globalComponents/Header"
 import Footer from "../../components/globalComponents/Footer"
-import "../../styleFolder/globalComponentsStyles/globalComponents.css"
+import Recipe from "../../components/recipeComponents/Recipe"
 
 export default function UserRecipePage(props){
     const {recipes,chef,deleteFood,add,edit} = props
@@ -28,7 +28,7 @@ export default function UserRecipePage(props){
         <Header header="profile page"/>
     </div>
     <div>
-        {mappedAllRecipes}
+        {mappedRecipe}
     </div>
     <div id="footerContainer">
         <Footer footer="just recipes"/>
