@@ -1,39 +1,39 @@
 import React from "react"
 import TripleHeader from "../../components/globalComponents/TripleHeader"
-import Header from "../../components/globalComponents/Header"
+// import Header from "../../components/globalComponents/Header"
 import Footer from "../../components/globalComponents/Footer"
-import Recipe from "../../components/recipeComponents/Recipe"
+// import Recipe from "../../components/recipeComponents/Recipe"
+import "../../styles/pageStyles/pageStyles.css"
 
 export default function UserRecipePage(props){
-    const {recipes,chef,deleteFood,add,edit} = props
-    const mappedRecipe = recipes.map(recipe => <Recipe 
-                                            {... recipe} 
-                                            key={recipe._id}
-                                            deleteMe={deleteFood}
-                                            currentUser={chef}
-                                            submit={add}
-                                            editRecipe={edit}
-                                            />)
+    // const {recipes,chef,deleteFood,add,edit} = props
+    // const mappedRecipe = recipes.map(recipe => <Recipe 
+    //                                         {... recipe} 
+    //                                         key={recipe._id}
+    //                                         deleteMe={deleteFood}
+    //                                         currentUser={chef}
+    //                                         submit={add}
+    //                                         editRecipe={edit}
+    //                                         />)
 
     return(
     <div className="pageContainer">
-    <div id="tripleHeaderContainer">
+    <div className="tripleHeaderContainer">
         <TripleHeader 
         header1="just" 
         header2="real" 
         header3="recipes"
         />
     </div>
-    <div id="pageContainer">
+    {/* <div id="pageContainer">
         <Header header="profile page"/>
-    </div>
+    </div> */}
     <div>
-        {mappedRecipe}
+        {/* {mappedRecipe} */}
     </div>
-    <div id="footerContainer">
+    <div className="footerContainer">
         <Footer footer="just recipes"/>
     </div>
     </div> 
     )
 }
-{/* <h1>{mappedRecipe}</h1> */}

@@ -1,0 +1,17 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box; 
+ }
+ #tripleHeaderContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+ }
+ #header1{
+    align-self: flex-end;
+ }
+ #header2{
+    align-self: flex-end;
+ }

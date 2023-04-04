@@ -1,11 +1,9 @@
 import React, {useState, useContext} from "react"
-
 import TripleHeader from "../../components/globalComponents/TripleHeader"
-import Header from "../../components/globalComponents/Header"
 import Footer from "../../components/globalComponents/Footer"
 import AuthForm from "../../components/authComponents/AuthForm"
 import {UserContext} from "../../context/UserProvider"
-
+import "../../styles/pageStyles/pageStyles.css"
 const credentials = {
     username: "",
     password: ""
@@ -39,14 +37,14 @@ export default function LandingPage(props){
     }
     return(
         <div className="pageContainer">
-        <div id="tripleHeaderContainer">
+        <div className="tripleHeaderContainer">
             <TripleHeader 
             header1="just" 
             header2="real" 
             header3="recipes"
             />
         </div>
-        <div id="authFormContainer">
+        <div className="authFormContainer">
             {!formToggle ?
             <>
             <AuthForm
@@ -67,7 +65,7 @@ export default function LandingPage(props){
             </>
             }
             </div>
-        <div id="footerContainer">
+        <div className="footerContainer">
             <Footer footer="just recipes"/>
         </div>
         </div>
