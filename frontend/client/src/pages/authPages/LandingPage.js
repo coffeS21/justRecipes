@@ -4,6 +4,7 @@ import Footer from "../../components/globalComponents/Footer"
 import AuthForm from "../../components/authComponents/AuthForm"
 import {UserContext} from "../../context/UserProvider"
 import "../../styles/pageStyles/pageStyles.css"
+import "../../styles/pageStyles/authPageStyles/landingPage.css"
 const credentials = {
     username: "",
     password: ""
@@ -44,7 +45,7 @@ export default function LandingPage(props){
             header3="recipes"
             />
         </div>
-        <div className="authFormContainer">
+        <div id="authFormContainer">
             {!formToggle ?
             <>
             <AuthForm
@@ -52,7 +53,11 @@ export default function LandingPage(props){
             handleSubmit={handleSignup}
             authInputs={authInputs}
             errMsg={errMsg}
-            />
+            btnText="sign up"/>
+            <div className="toggleContainer">
+            <p onClick={authFormToggle}>login</p>
+            <p onClick={authFormToggle}>signup</p>
+            </div>
             </>
             :
             <>
@@ -61,11 +66,15 @@ export default function LandingPage(props){
             handleSubmit={handleLogin}
             authInputs={authInputs}
             errMsg={errMsg}
-            /> 
+            btnText="login"/> 
+            <div className="toggleContainer">
+            <p onClick={authFormToggle}>login</p>
+            <p onClick={authFormToggle}>signup</p>
+            </div>
             </>
             }
             </div>
-        <div className="footerContainer">
+            <div className="footerContainer">
             <Footer footer="just recipes"/>
         </div>
         </div>

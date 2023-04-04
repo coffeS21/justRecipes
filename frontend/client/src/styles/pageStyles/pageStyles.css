@@ -21,14 +21,25 @@
      grid-template-rows: repeat(5, 1fr);
      grid-template-columns: 100%;
  }
-
-
+/****page lable****/
+.pageLable{
+    background-color: var(--bg-color);
+    color: var(--white);
+    font-family:appFont;
+    grid-row: 2/3;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1.3px;
+    text-decoration-style: dashed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
  /**** TRIPLE HEADER ****/
  .tripleHeaderContainer{
      font-family:appFont;
      background-color: var(--bg-color);
-     grid-row: 1/2;
      color: var(--white);
+     grid-row: 1/2;
      font-size: 05px;
      letter-spacing: 12px;
      padding-left:20px; 

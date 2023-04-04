@@ -1,8 +1,9 @@
 import React from "react"
 import TripleHeader from "../../components/globalComponents/TripleHeader"
-
+import Header from "../../components/globalComponents/Header"
 import Footer from "../../components/globalComponents/Footer"
 import "../../styles/pageStyles/pageStyles.css"
+import "../../styles/pageStyles/authPageStyles/profilePage.css"
 export default function ProfilePage(props){
     const {deleteAccount, username, id, logout} = props
       function deleteProfile(){
@@ -21,13 +22,13 @@ export default function ProfilePage(props){
         
 
 
-        {/* <div className="pageContainer">
+         <div className="pageLable">
           <Header header="profile page"/>
-        </div> */}
+        </div> 
           
           
           
-         <div className="userInfoContainer">
+         <div id="userInfoContainer">
             
             <div id="accountContainer">
             <p onClick={logout}>logout</p>

@@ -1,5 +1,5 @@
 import React from "react"
-
+import "../../styles/componentStyles/authForm.css"
 export default function AuthForm(props){
     
     const {
@@ -16,7 +16,7 @@ export default function AuthForm(props){
     return(
         <div>
         <form 
-        id="landingPageFormContainer"   
+        id="authFormContainer"   
         onSubmit={handleSubmit}>
         <label>
         <h6>username</h6>
