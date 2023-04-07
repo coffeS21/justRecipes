@@ -1,14 +1,14 @@
 import React, {useContext} from "react"
 import { Routes, Route, Navigate } from 'react-router-dom'
 import {UserContext} from "./context/UserProvider"
-import Nav from "./components/globalComponents/Nav"
+// import Nav from "./components/globalComponents/Nav"
 import ProfilePage from "./pages/authPages/ProfilePage"
 import LandingPage from "./pages/authPages/LandingPage"
 import ProtectedRoute from "./components/protectedRoutes/ProtectedRoute"
 import AllRecipesPage from "./pages/allRecipesFolder/AllRecipesPage"
-import UserRecipePage from "./pages/userRecipeFolder/UserRecipePage"
+import MyRecipesPage from "./pages/userRecipeFolder/MyRecipesPage"
 import CreateRecipePage from "./pages/userRecipeFolder/CreatePage"
-
+import "./styles/pageStyles/pageStyles.css"
 
 export default function App(props){
     const {token,
@@ -21,8 +21,8 @@ export default function App(props){
           ...initChefState
         } = useContext(UserContext)
     return(
-        <div className="app">
-        { token && <Nav/> }
+        <div>
+         {/* { token  } */}
       <Routes>
         <Route 
           path="/" 
@@ -50,10 +50,10 @@ export default function App(props){
           }
         />
         <Route 
-          path="/userRecipePage" 
+          path="/myRecipesPage" 
           element={
             <ProtectedRoute token={token} redirectTo="/">
-              <UserRecipePage 
+              <MyRecipesPage 
               recipes={initChefState.myRecipes}
               chef={user}
               deleteFood={deleteRecipe}

@@ -1,28 +1,26 @@
 import React from "react"
 import {Link} from "react-router-dom"
-
+import "../../styles/componentStyles/componentStyles.css"
 
 
 export default function AuthNav(props){
     return(
-        <div>
             <div id="linkContainer">
-                <Link className="navLikinks" to="/profilePage">
-                    <button>settings</button>
+                <Link className="navLinks" to="/profilePage">
+                    profile
                 </Link>
-                <Link className="navLikinks" to="/allRecipesPage">
-                    <button>all recipes page</button>
+
+                <Link className="navLinks" to="/allRecipesPage">
+                        all recipes
                 </Link>
-                <Link className="navLikinks" to="/myRecipesPage">
-                    <button>my recipes page</button>
+
+                <Link className="navLinks" to="/MyRecipesPage">
+                        my recipes
                 </Link>
-                <Link className="navLikinks" to="/createRecipePage">
-                    <button>create recipe</button>
-                </Link>
-                <Link className="navLikinks" to="/notePage">
-                    <button>my notes</button>
+
+                <Link className="navLinks" to="/createRecipePage">
+                        create recipe
                 </Link>
             </div>
-        </div>
     )
 }

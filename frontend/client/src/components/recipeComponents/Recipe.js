@@ -1,37 +1,38 @@
 import React from "react"
-import RecipeForm from "./RecipeForm"
+import "../../styles/componentStyles/componentStyles.css"
+// import RecipeForm from "./RecipeForm"
 
 export default function Recipe(props){
     const {title,
-        ingredents,
-        recipeSteps,
         deleteMe,
         currentUser, 
         user, 
          _id, 
         editRecipe} = props
+        console.log(currentUser)
     return(
         <div>
             {user === currentUser._id ?
-                <div>
+                <div id="recipeContainer">
+                    <div id="titleContainer">
                     <h1>{title}</h1>
-                    <p>{ingredents}</p>
-                    <p>{recipeSteps}</p>
-                    <button onClick={()=> deleteMe(_id) }>delete recipe</button>
-                    <RecipeForm 
-                    buttonLable="edit recipe"
-                     id={_id} 
-                     submit={editRecipe}
-                     title={title} 
-                     />
+                    </div>
+                    <div id="chai">
+                    <h2 onClick={()=> deleteMe(_id) }>delete</h2> 
+                    </div>
                 </div>
                 :
-                <>
-                    <h1>{title}</h1>
-                    <p>{ingredents}</p>
-                    <p>{recipeSteps}</p>
-                </>
+                <div id="recipeContainer">
+                    <div><h1>{title}</h1></div>
+                </div>
             }    
         </div> 
     )
 }
+                    {/* <RecipeForm 
+                    buttonLable="edit recipe"
+                     id={_id} 
+                     submit={editRecipe}
+                     title={title} 
+                     /> */}
+                    {/* <button onClick={()=> deleteMe(_id) }>delete recipe</button> */}
