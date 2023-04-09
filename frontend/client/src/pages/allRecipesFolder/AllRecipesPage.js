@@ -29,7 +29,7 @@ export default function AllRecipesPage(props){
             <Nav/>
         </div>
         </div>
-        <div className="recipeContainer">
+        <div id="allRecipeContainer">
             <p>{mappedAllRecipes}</p>
         </div> 
         <div className="footerContainer">

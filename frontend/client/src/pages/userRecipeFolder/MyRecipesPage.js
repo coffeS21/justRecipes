@@ -17,6 +17,7 @@ export default function MyReicesPage(props){
                                             submit={add}
                                             editRecipe={edit}
                                             />)
+                                            console.log(mappedRecipe.length)
 
     return(
     <div className="pageContainer">
@@ -29,14 +30,14 @@ export default function MyReicesPage(props){
     </div>
     <div className="pageLable">
     <div id="headerContainer">
-        <Header header="recipes page"/>
+        <Header header="my recipes page"/>
     </div>
     <div id="navContainer">
         <Nav/>
     </div>
     </div>
     <div id="myRecipeContainer">
-        {mappedRecipe}
+        {mappedRecipe.length <=0? <h2>you currently have zero recipes</h2>: mappedRecipe }
     </div>
     <div className="footerContainer">
         <Footer footer="just recipes"/>

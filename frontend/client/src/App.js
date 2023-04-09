@@ -7,7 +7,7 @@ import LandingPage from "./pages/authPages/LandingPage"
 import ProtectedRoute from "./components/protectedRoutes/ProtectedRoute"
 import AllRecipesPage from "./pages/allRecipesFolder/AllRecipesPage"
 import MyRecipesPage from "./pages/userRecipeFolder/MyRecipesPage"
-import CreateRecipePage from "./pages/userRecipeFolder/CreatePage"
+import CreateRecipePage from "./pages/userRecipeFolder/CreateRecipePage"
 import "./styles/pageStyles/pageStyles.css"
 
 export default function App(props){

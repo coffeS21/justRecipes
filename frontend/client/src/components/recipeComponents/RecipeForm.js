@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-
+import "../../styles/componentStyles/authForm.css"
 export default function RecipeForm(props){
 
     const recipeData = {
@@ -26,35 +26,37 @@ export default function RecipeForm(props){
 
     }
     return(
+        <div id="createFormContainer">
+        <form onSubmit={handleSubmit}>
         <div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <input
-                    type="text"
-                    name="title"
-                    value={inputs.title}
-                    onChange={handleChange}
-                    placeholder="title"/>
-                </div>
-                <div>
-                    <textarea
-                    type="text"
-                    name="ingredents"
-                    value={inputs.ingredents}
-                    onChange={handleChange}
-                    placeholder="enter your ingredents list"/>
-                </div>
-                <div>
-                    <textarea
-                    type="text"
-                    name="steps"
-                    value={inputs.steps}
-                    onChange={handleChange}
-                    placeholder="enter your recipe steps"
-                    />
-                </div>
-                <button>{props.buttonLable}</button>
-            </form>
+            <input
+            type="text"
+            name="title"
+            value={inputs.title}
+            onChange={handleChange}
+            placeholder="title"/>
+        </div>
+        <div>
+            <textarea
+            type="text"
+            name="ingredents"
+            value={inputs.ingredents}
+            onChange={handleChange}
+            placeholder="enter your ingredents list"/>
+        </div>
+        <div>
+            <textarea
+            type="text"
+            name="steps"
+            value={inputs.steps}
+            onChange={handleChange}
+            placeholder="enter your recipe steps"
+            />
+        </div>
+        <div>
+            <button>{props.buttonLable}</button>
+        </div>
+        </form>
         </div>
     )
 }

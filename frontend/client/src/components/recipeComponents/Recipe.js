@@ -15,10 +15,11 @@ export default function Recipe(props){
             {user === currentUser._id ?
                 <div id="recipeContainer">
                     <div id="titleContainer">
-                    <h1>{title}</h1>
+                    <p>{title}</p>
                     </div>
                     <div id="chai">
-                    <h2 onClick={()=> deleteMe(_id) }>delete</h2> 
+                    <p onClick={()=> editRecipe(_id) }>edit</p> 
+                    <p onClick={()=> deleteMe(_id) }>delete</p> 
                     </div>
                 </div>
                 :

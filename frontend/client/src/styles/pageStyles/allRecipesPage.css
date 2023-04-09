@@ -1,7 +1,8 @@
-.recipeContainer{
-    background-color:black;
+#allRecipeContainer{
     height:100%;
     grid-row:3/5;
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+
