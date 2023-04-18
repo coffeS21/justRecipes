@@ -1,0 +1,50 @@
+  /**create form**/
+  #createFormContainer{
+    background-color: tomato;
+    height:100%;
+  }
+
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    font-family: appFont;
+    font-size: 30px;
+    height: 12px;
+    padding: 10px 5px 5px;
+    text-align: center;
+    width: 200px;
+    height:50px;
+  }
+  #textareaContainer{
+    background-color:pink;
+  }
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    color: rgba(255,255,255,.8);
+    font-family: appFont;
+    font-size: 30px;
+    height: 12px;
+    padding: 10px 5px 5px;
+    text-align: center;
+    width: 200px;
+    height:50px;
+  }
+    input:focus{
+    outline:none;
+    caret-color: rgba(255,255,255,.8);
+  }
+
+  .chalk-border {
+    border:10px solid rgba(255,255,255,.8);
+    border-image: url("https://www.unicefusa.org/sites/default/files/answer-box.png") 20;
+  }
+  #recipeFormContainer{
+    border-bottom: 12px solid green;
+    background: orange;
+  }
